@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Example</title>
+</head>
+<body>
+    <p id="myParagraph">This is an example paragraph</p>
+    <button id="changeText">Change Text</button>
+
+    <script>
+        const button = document.querySelector('#changeText');
+        let clickCount = 0;
+
+        function newText() {
+            const p = document.querySelector('#myParagraph');
+            clickCount++;
+            if (clickCount === 1) {
+                p.innerText = 'The text has been changed once';
+            } else if (clickCount === 2) {
+                p.innerText = 'The text has been changed twice';
+            } else if (clickCount > 2) {
+                clickCount = 0; // Reset clickCount to 0 after it reaches 2
+            }
+        }
+
+        button.addEventListener('click', newText);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+</head>
+<body>
+    <form id="userInfoForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="favoriteGame">Favorite Game:</label>
+        <input type="text" id="favoriteGame" name="favoriteGame" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.querySelector('#userInfoForm');
+        const nameInput = document.querySelector('#name');
+        const emailInput = document.querySelector('#email');
+        const favoriteGameInput = document.querySelector('#favoriteGame');
+
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get the values from the input fields
+            const name = nameInput.value;
+            const email = emailInput.value;
+            const favoriteGame = favoriteGameInput.value;
+
+            // Display the submitted information
+            alert(`Name: ${name}\nEmail: ${email}\nFavorite Game: ${favoriteGame}`);
+
+            // Reset the form
+            form.reset();
+        }
+
+        form.addEventListener('submit', handleFormSubmit);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO-LIST</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="2019781-hd_1920_1080_24fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <section class="container">
+        <div class="heading">
+            <img class="heading_img" src="download.jpg">
+            <h1 class="title">My TO-DO List!</h1>
+        </div>
+        <form class="form">
+            <label class="form_label" for="todoo">Today I need to do:</label>
+            <input type="text" class="form_input" id="todoo" name="TO-DO-LIST" size="30" required>
+            <button type="submit" class="button" onclick="addTask()"><span>Submit</span></button>
+          
+        </form>
+        <ul id="task-list" class="TO-DO-LIST"></ul>
+    </section>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
